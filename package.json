@@ -1,0 +1,32 @@
+{
+  "name": "sukhpreet-portfolio-assignment3",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "install-all": "npm install && npm --prefix client install",
+    "seed-admin": "node server/scripts/seedAdmin.js",
+    "start": "node server.js",
+    "test": "npm --prefix client test",
+    "e2e": "npm --prefix client run e2e",
+    "check": "npm --prefix client test && npm --prefix client run build"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-jwt": "^8.5.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7"
+  }
+}
